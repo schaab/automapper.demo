@@ -183,8 +183,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\QuoteItem.cs" />
-    <Compile Include="Models\QuoteSummaryViewModel.cs" />
+    <Compile Include="Models\FooBarViewModel.cs" />
+    <Compile Include="Models\MappingExampleOne.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
