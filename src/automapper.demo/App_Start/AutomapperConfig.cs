@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using AutoMapper;
+using automapper.demo.Automapper;
 
 namespace automapper.demo
 {
@@ -14,7 +15,9 @@ namespace automapper.demo
         {
             if (!_isRegistered)
             {
-                Mapper.Initialize(cfg => { });
+                Mapper.Initialize(cfg => {
+                    cfg.AddProfile<FooBarProfile>();
+                });
             }
         }
     }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using automapper.demo.Models;
 using automapper.demo.service.Services;
+using AutoMapper;
 
 namespace automapper.demo.Controllers
 {
@@ -38,7 +39,7 @@ namespace automapper.demo.Controllers
                 Bar = fooBar.Bar
             };
 
-            return View();
+            return View(model);
         }
 
         public ActionResult MappingExampleTwo()
@@ -46,7 +47,15 @@ namespace automapper.demo.Controllers
             var fooBar = FauxService.GetFooBar();
             var model = new MappingExampleTwo(fooBar);
 
-            return View();
+            return View(model);
+        }
+
+        public ActionResult MappingExampleThree()
+        {
+            var fooBar = FauxService.GetFooBar();
+            var model = Mapper.Map<MappingExampleTwo>(fooBar);
+
+            return View(model);
         }
 
 
