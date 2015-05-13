@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
 
-namespace automapper.demo.Models
+namespace automapper.demo.service.Models
 {
-    public class MappingExampleOne
+    public class FooBarDTO
     {
         public string Foo { get; set; }
         public string Bar { get; set; }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using automapper.demo.Models;
+using automapper.demo.service.Services;
 
 namespace automapper.demo.Controllers
 {
@@ -30,9 +31,24 @@ namespace automapper.demo.Controllers
 
         public ActionResult MappingExampleOne()
         {
-            var model = new MappingExampleOne();
+            var fooBar = FauxService.GetFooBar();
+            var model = new MappingExampleOne 
+            { 
+                Foo = fooBar.Foo,
+                Bar = fooBar.Bar
+            };
 
             return View();
         }
+
+        public ActionResult MappingExampleTwo()
+        {
+            var fooBar = FauxService.GetFooBar();
+            var model = new MappingExampleTwo(fooBar);
+
+            return View();
+        }
+
+
     }
 }

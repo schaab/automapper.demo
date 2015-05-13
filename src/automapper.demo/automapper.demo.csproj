@@ -185,6 +185,7 @@
     </Compile>
     <Compile Include="Models\FooBarViewModel.cs" />
     <Compile Include="Models\MappingExampleOne.cs" />
+    <Compile Include="Models\MappingExampleTwo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
