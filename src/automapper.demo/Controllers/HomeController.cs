@@ -58,6 +58,12 @@ namespace automapper.demo.Controllers
             return View(model);
         }
 
+        public ActionResult MappingExampleFour()
+        {
+            var widget = FauxService.GetWidget();
+            var model = Mapper.Map<WigetModel>(widget);
 
+            return View(widget);
+        }
     }
 }

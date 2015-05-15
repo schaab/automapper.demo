@@ -16,7 +16,7 @@ namespace automapper.demo
             if (!_isRegistered)
             {
                 Mapper.Initialize(cfg => {
-                    cfg.AddProfile<FooBarProfile>();
+                    cfg.AddProfile<MappingProfile>();
                 });
             }
         }

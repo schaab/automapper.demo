@@ -14,5 +14,10 @@ namespace automapper.demo.service.Services
         {
             return new FooBarDTO { Foo = "Bar", Bar = "Foo" };
         }
+
+        public static WidgetDTO GetWidget()
+        {
+            return new WidgetDTO { Property1 = "42", Property2 = "8/31/1981" };
+        }
     }
 }
