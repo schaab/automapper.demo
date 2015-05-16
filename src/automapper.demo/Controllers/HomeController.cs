@@ -55,7 +55,7 @@ namespace automapper.demo.Controllers
             var fooBar = FauxService.GetFooBar();
             var model = Mapper.Map<MappingExampleTwo>(fooBar);
 
-            return View(model);
+            return View("MappingExampleTwo", model);
         }
 
         public ActionResult MappingExampleFour()
@@ -63,7 +63,7 @@ namespace automapper.demo.Controllers
             var widget = FauxService.GetWidget();
             var model = Mapper.Map<WigetModel>(widget);
 
-            return View(widget);
+            return View(model);
         }
     }
 }

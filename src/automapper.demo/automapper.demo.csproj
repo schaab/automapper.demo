@@ -218,6 +218,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Views\Home\MappingExampleOne.cshtml" />
     <Content Include="Views\Home\MappingExampleTwo.cshtml" />
+    <Content Include="Views\Home\MappingExampleFour.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\automapper.demo.service\automapper.demo.service.csproj">
