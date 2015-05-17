@@ -20,6 +20,11 @@ namespace automapper.demo.Automapper
 
             Mapper.CreateMap<string, DateTime>().ConvertUsing<DateTimeTypeConverter>();
 
+            Mapper.CreateMap<WidgetDTO, WigetModel>()
+                .ForMember(dest => dest.Property1, opt => opt.MapFrom(src => src.Property1))
+                .ForMember(dest => dest.Property2, opt => opt.MapFrom(src => src.Property2))
+                .ForMember(dest => dest.Property3, opt => opt.Ignore());
+
         }
 
         public class DateTimeTypeConverter : ITypeConverter<string, DateTime>
