@@ -7,7 +7,7 @@ using automapper.demo.Automapper;
 
 namespace automapper.demo
 {
-    public class AutomapperConfig
+    public static class AutomapperConfig
     {
         private static bool _isRegistered = false;
 

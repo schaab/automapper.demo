@@ -5,6 +5,7 @@ namespace automapper.demo.Models
 {
     public class MappingExampleTwo
     {
+        public MappingExampleTwo() { }
 
         public MappingExampleTwo(FooBarDTO foobarDto)
         {

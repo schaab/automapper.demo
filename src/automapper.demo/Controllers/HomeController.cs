@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using automapper.demo.Models;
 using automapper.demo.service.Services;
 using AutoMapper;
+using System.Web.UI;
 
 namespace automapper.demo.Controllers
 {
@@ -30,40 +31,45 @@ namespace automapper.demo.Controllers
             return View();
         }
 
-        public ActionResult MappingExampleOne()
+        [OutputCache(Location = OutputCacheLocation.None)]
+        public JsonResult MappingExampleOne()
         {
-            var fooBar = FauxService.GetFooBar();
+            var fooBar = FauxService.GetFooBarExampleOne();
             var model = new MappingExampleOne 
             { 
                 Foo = fooBar.Foo,
                 Bar = fooBar.Bar
             };
 
-            return View(model);
+            return Json(model, JsonRequestBehavior.AllowGet);
+           
         }
 
-        public ActionResult MappingExampleTwo()
+        [OutputCache(Location = OutputCacheLocation.None)]
+        public JsonResult MappingExampleTwo()
         {
-            var fooBar = FauxService.GetFooBar();
+            var fooBar = FauxService.GetFooBarExampleTwo();
             var model = new MappingExampleTwo(fooBar);
 
-            return View(model);
+            return Json(model, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult MappingExampleThree()
+        [OutputCache(Location = OutputCacheLocation.None)]
+        public JsonResult MappingExampleThree()
         {
-            var fooBar = FauxService.GetFooBar();
+            var fooBar = FauxService.GetFooBarExampleThree();
             var model = Mapper.Map<MappingExampleTwo>(fooBar);
 
-            return View("MappingExampleTwo", model);
+            return Json(model, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult MappingExampleFour()
+        [OutputCache(Location = OutputCacheLocation.None)]
+        public JsonResult MappingExampleFour()
         {
             var widget = FauxService.GetWidget();
             var model = Mapper.Map<WigetModel>(widget);
 
-            return View(model);
+            return Json(model, JsonRequestBehavior.AllowGet);
         }
     }
 }

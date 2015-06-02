@@ -10,9 +10,19 @@ namespace automapper.demo.service.Services
     public static class FauxService
     {
 
-        public static FooBarDTO GetFooBar()
+        public static FooBarDTO GetFooBarExampleOne()
         {
-            return new FooBarDTO { Foo = "Bar", Bar = "Foo" };
+            return new FooBarDTO { Foo = "Inline assignment", Bar = "can get really long and messy." };
+        }
+
+        public static FooBarDTO GetFooBarExampleTwo()
+        {
+            return new FooBarDTO { Foo = "Constructor creation is a littel better", Bar = "but couples objects" };
+        }
+
+        public static FooBarDTO GetFooBarExampleThree()
+        {
+            return new FooBarDTO { Foo = "Serenity now", Bar = "mapping clean and simple" };
         }
 
         public static WidgetDTO GetWidget()
